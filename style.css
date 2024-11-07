@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: #000000;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.section-title {
+  font-size: 2em;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 1.2em;
+  color: #aaaaaa;
+  margin-bottom: 20px;
+}
+
+#get-notes-button {
+  padding: 15px 30px;
+  margin: 20px 0;
+  font-size: 1.2em;
+  border: none;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+#get-notes-button:hover {
+  background-color: #0056b3;
+}
+
+.tree-chart {
+  display: flex;
+  justify-content: space-around; /* Space out sections evenly */
+  margin-top: 20px;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.5s ease; /* Smooth transition */
+}
+
+.notes-section {
+  position: relative;
+  opacity: 0; /* Start hidden for animation */
+  transform: translateY(20px); /* Start off-screen for drop effect */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
+}
+
+.notes-content {
+  display: none; /* Hide the notes initially */
+  opacity: 0; /* Initially hidden */
+  max-height: 0; /* No height initially */
+  overflow: hidden; /* Hide overflow */
+  transition: max-height 0.5s ease, opacity 0.5s ease; /* Smooth transition */
+  padding: 0; /* No padding to avoid a square effect */
+  color: #ffffff; /* Text color for notes */
+}
+
+.notes-content.active {
+  display: block; /* Show the notes */
+  opacity: 1; /* Fade in */
+  max-height: 500px; /* Set a max height for the expanded state */
+  padding: 10px 0; /* Optional padding for content */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  padding: 5px 0;
+}
+
+ul li a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  text-decoration: underline;
+}
+
+.topic-header {
+  cursor: pointer; /* Make headers clickable */
+  margin-bottom: 10px; /* Space below the header */
+  padding: 10px; /* Padding around the header */
+  background-color: rgba(255, 255, 255, 0.1); /* Slight background for the header */
+  border-radius: 5px; /* Rounded corners for the header */
+  transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.topic-header:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Darken header on hover */
+}
+
+/* Remove ghost styles */

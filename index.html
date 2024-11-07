@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curious Ghost</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.5/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.4/addons/p5.dom.min.js"></script>
+</head>
+<body>
+
+  <section id="notes">
+    <div class="container">
+      <h2 class="section-title">Programming & YCMOU Notes</h2>
+      <p class="section-subtitle">Access notes for C++, Python, and YCMOU courses in a clean, easy-to-navigate format.</p>
+  
+      <button id="get-notes-button" onclick="toggleNotes()">Get Notes</button>
+  
+      <div class="tree-chart" id="notes-chart">
+        <div class="notes-section" id="cpp-section">
+          <div class="topic-header" onclick="toggleContent('cpp-notes', this)">C++ Notes</div>
+          <div id="cpp-notes" class="notes-content">
+            <ul>
+              <li><a href="cpp-intro.html">Introduction to C++</a></li>
+              <li><a href="cpp-variables.html">Variables and Data Types</a></li>
+              <li><a href="cpp-loops.html">Loops and Control Structures</a></li>
+              <li><a href="cpp-functions.html">Functions and Scope</a></li>
+              <li><a href="cpp-classes.html">Classes and Objects</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="notes-section" id="python-section">
+          <div class="topic-header" onclick="toggleContent('python-notes', this)">Python Notes</div>
+          <div id="python-notes" class="notes-content">
+            <ul>
+              <li><a href="python-intro.html">Introduction to Python</a></li>
+              <li><a href="python-variables.html">Variables and Data Types</a></li>
+              <li><a href="python-loops.html">Loops and Control Structures</a></li>
+              <li><a href="python-functions.html">Functions and Scope</a></li>
+              <li><a href="python-classes.html">Classes and Objects</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="notes-section" id="ycmou-section">
+          <div class="topic-header" onclick="toggleContent('ycmou-notes', this)">YCMOU Notes</div>
+          <div id="ycmou-notes" class="notes-content">
+            <ul>
+              <li><a href="ycmou-intro.html">Introduction to YCMOU Courses</a></li>
+              <li><a href="ycmou-study-materials.html">Study Materials</a></li>
+              <li><a href="ycmou-assignments.html">Assignments and Projects</a></li>
+              <li><a href="ycmou-exam-prep.html">Exam Preparation Tips</a></li>
+              <li><a href="ycmou-resources.html">Additional Resources</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Removed the curious ghost section -->
+  
+  <script src="./script.js"></script>
+</body>
+</html>
